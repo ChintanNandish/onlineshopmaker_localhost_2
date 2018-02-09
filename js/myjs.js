@@ -42,18 +42,21 @@
 				if(pwd.length <8 || pwd.length >20){
 					alert("Password must have length between 8-20!");
 					document.getElementById("pwd").focus();
-				
+					document.getElementById("pwd").value='';
+					
 					return false;
 				}
 				else if(pass_pattern.test(pwd)==false){
 					alert("Password must contain at least one number, one special character(!@#$%^&*), one upper and lower case character with the length between 8-20!");
 					document.getElementById("pwd").focus();
-				
+					document.getElementById("pwd").value='';
+					
 					return false;
 				}
 				else if(cpwd!=pwd){
 					alert("Password and ConfirmPassword must be same");
 					document.getElementById("cpwd").focus();
+					document.getElementById("pwd").value='';
 				
 					return false;
 				}
