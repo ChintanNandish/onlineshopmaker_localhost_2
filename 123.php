@@ -15,7 +15,7 @@ $product = $json[$shopname];
 $count = 0;
 $keys = array_keys($product[array_keys($product)[0]]);
 foreach($keys as $k){
-	$sheet->setCellValue(chr(ord('A')+$count).'1', $keys[$count]);
+	$sheet->setCellValue(chr(ord('A')+$count).'1', $keys[$count]);     //setting column name here
 	$count++;
 }
 $count=0;
@@ -23,7 +23,7 @@ $number = 2;
 foreach($product as $p){
 	foreach($p as $values){
 		if($values != ''){
-			$sheet->setCellValue(chr(ord('A')+$count).$number, $values);
+			$sheet->setCellValue(chr(ord('A')+$count).$number, $values); //setting values of the products
 		}
 		else{
 			$sheet->setCellValue(chr(ord('A')+$count).$number, 'N.A');
